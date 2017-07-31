@@ -1,0 +1,44 @@
+//
+//  Joy.pch
+//  Joys
+//
+//  Created by dq on 16/4/5.
+//  Copyright © 2016年 dq. All rights reserved.
+//
+
+#ifndef Joy_pch
+#define Joy_pch
+
+#import "UIView+HUD.h"
+
+#define SCREEN_BOUNDS [UIScreen mainScreen].bounds
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+
+/** 最新数据 */
+#define requestLatestDataURL @"http://news-at.zhihu.com/api/4/news/latest"
+/** 某天之前的数据  需要拼接date*/
+#define requestBeforeDataURL @"http://news.at.zhihu.com/api/4/news/before/"
+/** 某条数据  需要拼接id*/
+#define requestNewsURL @"http://news-at.zhihu.com/api/4/news/"
+/** 主题列表 */
+#define requestThemes @"http://news-at.zhihu.com/api/4/themes"
+/** 获取某主题的数据 需要拼接主题id*/
+#define requestThemeData @"http://news-at.zhihu.com/api/4/theme/"
+/** 获取热门数据 */
+#define requestHotData @"http://news-at.zhihu.com/api/3/news/hot"
+/** 获取评论总数和点赞总数 */
+#define requestExtraData @"http://news-at.zhihu.com/api/4/story-extra/"
+/** 获取长评论  需要拼接id/long-comments */
+#define requestLongComments @"http://news-at.zhihu.com/api/4/story/"
+
+
+
+
+#define CHOSEN_CELL_HEIGHT 120
+
+#define WK(weakSelf) __weak __typeof(self)weakSelf = self;
+
+
+#endif /* Joy_pch */
