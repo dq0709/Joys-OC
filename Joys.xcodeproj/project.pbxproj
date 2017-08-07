@@ -17,6 +17,7 @@
 		2CE3EC711CCBB40E00B5B476 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3EC6C1CCBB40E00B5B476 /* FMResultSet.m */; };
 		2CE3EC731CCBB45F00B5B476 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE3EC721CCBB45F00B5B476 /* libsqlite3.0.tbd */; };
 		2CE3EC761CCBB63400B5B476 /* DQDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3EC751CCBB63400B5B476 /* DQDBManager.m */; };
+		4876BA9C1F38741500A3BD61 /* DQPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4876BA9B1F38741500A3BD61 /* DQPhotoBrowser.m */; };
 		48C0944B1DF944DA005E90B6 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C0944A1DF944DA005E90B6 /* libAFNetworking.a */; };
 		48C0944D1DF944DD005E90B6 /* libDACircularProgress.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C0944C1DF944DD005E90B6 /* libDACircularProgress.a */; };
 		48C0944F1DF944E1005E90B6 /* libMasonry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C0944E1DF944E1005E90B6 /* libMasonry.a */; };
@@ -94,6 +95,8 @@
 		2CE3EC721CCBB45F00B5B476 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		2CE3EC741CCBB63400B5B476 /* DQDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQDBManager.h; sourceTree = "<group>"; };
 		2CE3EC751CCBB63400B5B476 /* DQDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQDBManager.m; sourceTree = "<group>"; };
+		4876BA9A1F38741500A3BD61 /* DQPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQPhotoBrowser.h; sourceTree = "<group>"; };
+		4876BA9B1F38741500A3BD61 /* DQPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQPhotoBrowser.m; sourceTree = "<group>"; };
 		48C0944A1DF944DA005E90B6 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/Joys-ceblawnjyfzmckflroohqggyhqhl/Build/Products/Debug-iphonesimulator/AFNetworking/libAFNetworking.a"; sourceTree = "<group>"; };
 		48C0944C1DF944DD005E90B6 /* libDACircularProgress.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDACircularProgress.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/Joys-ceblawnjyfzmckflroohqggyhqhl/Build/Products/Debug-iphonesimulator/DACircularProgress/libDACircularProgress.a"; sourceTree = "<group>"; };
 		48C0944E1DF944E1005E90B6 /* libMasonry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMasonry.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/Joys-ceblawnjyfzmckflroohqggyhqhl/Build/Products/Debug-iphonesimulator/Masonry/libMasonry.a"; sourceTree = "<group>"; };
@@ -284,6 +287,8 @@
 		85195FEC1CB6806700F88EA0 /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				4876BA9A1F38741500A3BD61 /* DQPhotoBrowser.h */,
+				4876BA9B1F38741500A3BD61 /* DQPhotoBrowser.m */,
 				858426301CC5E06400E126B6 /* 导航 */,
 				854653541CB3C5D6007B2FE5 /* DQPicturesViewController.h */,
 				854653551CB3C5D6007B2FE5 /* DQPicturesViewController.m */,
@@ -690,6 +695,7 @@
 				2CE3EC761CCBB63400B5B476 /* DQDBManager.m in Sources */,
 				85195FF11CB688B200F88EA0 /* DQChosen.m in Sources */,
 				854653661CB3C5D6007B2FE5 /* DQJokesTableViewController.m in Sources */,
+				4876BA9C1F38741500A3BD61 /* DQPhotoBrowser.m in Sources */,
 				856AF5DF1CCDFDCA008A0AE3 /* DQPicCollectionViewController.m in Sources */,
 				2CE3EC6F1CCBB40E00B5B476 /* FMDatabasePool.m in Sources */,
 				2C1555B41CCCBC96004DFCFC /* DQJokeColletionTableViewController.m in Sources */,

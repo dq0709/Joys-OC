@@ -207,8 +207,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     
     // Navigation buttons
     if ([self.navigationController.viewControllers objectAtIndex:0] == self) {
-        UIBarButtonItem *extroBtn = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"collection"] style:UIBarButtonItemStylePlain target:self action:@selector(extroButtonPressed:)];
-        self.navigationItem.leftBarButtonItem = extroBtn;
         // We're first on stack so show done button
         _doneButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", nil) style:UIBarButtonItemStylePlain target:self action:@selector(doneButtonPressed:)];
         // Set appearance
@@ -1554,9 +1552,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 }
 
 #pragma mark - Misc
-- (void)extroButtonPressed:(id)sender {
-    [_delegate didClickExtroButton];
-}
+
 - (void)doneButtonPressed:(id)sender {
     // Only if we're modal and there's a done button
     if (_doneButton) {

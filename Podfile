@@ -12,4 +12,5 @@ pod 'SDWebImage', '~> 3'
 pod 'PSCollectionView', '~> 0.0.1'
 pod 'WMPageController', '~> 1'
 pod 'MWPhotoBrowser'
+
 end

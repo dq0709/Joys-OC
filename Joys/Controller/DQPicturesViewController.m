@@ -14,16 +14,16 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <MJRefresh.h>
 #import <Masonry.h>
-#import <MWPhotoBrowser/MWPhotoBrowser.h>
+#import "DQPhotoBrowser.h"
 #import "DQNavi.h"
 
 
-@interface DQPicturesViewController () <UIScrollViewDelegate, PSCollectionViewDelegate, PSCollectionViewDataSource, MWPhotoBrowserDelegate>
+@interface DQPicturesViewController () <UIScrollViewDelegate, PSCollectionViewDelegate, PSCollectionViewDataSource, DQPhotoBrowserDelegate>
 @property (nonatomic, strong)PSCollectionView *collectionView;
 @property (nonatomic, strong)NSMutableArray *picturesArray;
 @property (nonatomic, assign)NSInteger sumNumber;
 
-@property (nonatomic, strong) MWPhotoBrowser *browser;
+@property (nonatomic, strong) DQPhotoBrowser *browser;
 @end
 
 @implementation DQPicturesViewController
@@ -108,7 +108,8 @@
 }
 
 - (void)collectionView:(PSCollectionView *)collectionView didSelectCell:(PSCollectionViewCell *)cell atIndex:(NSInteger)index {
-    self.browser  = [[MWPhotoBrowser alloc] initWithDelegate:self];
+    self.browser  = [[DQPhotoBrowser alloc] initWithDelegate:self];
+    self.browser.myDelegate = self;
     self.browser.zoomPhotosToFill = YES;
     self.browser.enableSwipeToDismiss = YES;
     [self.browser setCurrentPhotoIndex:index];
