@@ -570,7 +570,7 @@
 				TargetAttributes = {
 					854652F41CB3C512007B2FE5 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 64EY45HQ5U;
+						DevelopmentTeam = 4G7FW2E8D6;
 					};
 					8546530D1CB3C512007B2FE5 = {
 						CreatedOnToolsVersion = 7.2;
@@ -836,13 +836,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 64EY45HQ5U;
+				DEVELOPMENT_TEAM = 4G7FW2E8D6;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = Joys/Other/Joy.pch;
 				INFOPLIST_FILE = Joys/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = dq.Joys;
+				PRODUCT_BUNDLE_IDENTIFIER = dq.Joys.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -857,13 +858,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 64EY45HQ5U;
+				DEVELOPMENT_TEAM = 4G7FW2E8D6;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = Joys/Other/Joy.pch;
 				INFOPLIST_FILE = Joys/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = dq.Joys;
+				PRODUCT_BUNDLE_IDENTIFIER = dq.Joys.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

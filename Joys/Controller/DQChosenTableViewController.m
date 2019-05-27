@@ -42,9 +42,9 @@
 #pragma mark - 生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
+//    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
     self.tableView.backgroundColor = [UIColor clearColor];
-    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 44, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(-64, 0, 0, 0);
     self.sideMenuViewController.navigationItem.title = @"精选";
     self.sideMenuViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:self action:@selector(gotoLeftMenu:)];
     
@@ -86,7 +86,7 @@
         [weakSelf.tableView.mj_header endRefreshing];
         [weakSelf.tableView.mj_footer endRefreshing];
     } failure:^(NSError *error) {
-        [weakSelf.tableView showWarning:@"您的网络不给力！"];
+        [weakSelf.tableView showWarning:error.localizedDescription];
         [weakSelf.tableView.mj_header endRefreshing];
         [weakSelf.tableView.mj_footer endRefreshing];
     }];
@@ -111,15 +111,15 @@
 }
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    UIColor * color = [UIColor colorWithRed:132/255.0 green:175/255.0 blue:109/255.0 alpha:1];
-    CGFloat height = self.tableView.tableHeaderView.bounds.size.height;
-    CGFloat offsetY = scrollView.contentOffset.y;
-    if (offsetY > NAVBAR_CHANGE_POINT) {
-        CGFloat alpha = 1 - ((NAVBAR_CHANGE_POINT + height - offsetY - 64) / height);
-        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
-    } else {
-        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:0]];
-    }
+//    UIColor * color = [UIColor colorWithRed:132/255.0 green:175/255.0 blue:109/255.0 alpha:1];
+//    CGFloat height = self.tableView.tableHeaderView.bounds.size.height;
+//    CGFloat offsetY = scrollView.contentOffset.y;
+//    if (offsetY > NAVBAR_CHANGE_POINT) {
+//        CGFloat alpha = 1 - ((NAVBAR_CHANGE_POINT + height - offsetY - 64) / height);
+//        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
+//    } else {
+//        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:0]];
+//    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {

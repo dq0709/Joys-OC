@@ -10,7 +10,7 @@
 
 @implementation DQChosenLeftMenu
 + (NSArray *)getChosenLeftMenuListWith:(id)responseObject {
-    NSArray *dataArray = responseObject[@"others"];
+    NSArray *dataArray = responseObject[@"data"];
     NSMutableArray *array = [NSMutableArray array];
     for (NSDictionary *dict in dataArray) {
         DQChosenLeftMenu *item = [[DQChosenLeftMenu alloc]init];

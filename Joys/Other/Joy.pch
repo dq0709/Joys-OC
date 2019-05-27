@@ -17,21 +17,21 @@
 
 
 /** 最新数据 */
-#define requestLatestDataURL @"http://news-at.zhihu.com/api/4/news/latest"
+#define requestLatestDataURL @"https://news-at.zhihu.com/api/4/news/latest"
 /** 某天之前的数据  需要拼接date*/
-#define requestBeforeDataURL @"http://news.at.zhihu.com/api/4/news/before/"
+#define requestBeforeDataURL @"https://news.at.zhihu.com/api/4/news/before/"
 /** 某条数据  需要拼接id*/
-#define requestNewsURL @"http://news-at.zhihu.com/api/4/news/"
+#define requestNewsURL @"https://news-at.zhihu.com/api/4/news/"
 /** 主题列表 */
-#define requestThemes @"http://news-at.zhihu.com/api/4/themes"
+#define requestThemes @"https://news-at.zhihu.com/api/3/sections"
 /** 获取某主题的数据 需要拼接主题id*/
-#define requestThemeData @"http://news-at.zhihu.com/api/4/theme/"
+#define requestThemeData @"https://news-at.zhihu.com/api/3/section/"
 /** 获取热门数据 */
-#define requestHotData @"http://news-at.zhihu.com/api/3/news/hot"
+#define requestHotData @"https://news-at.zhihu.com/api/3/news/hot"
 /** 获取评论总数和点赞总数 */
-#define requestExtraData @"http://news-at.zhihu.com/api/4/story-extra/"
+#define requestExtraData @"https://news-at.zhihu.com/api/4/story-extra/"
 /** 获取长评论  需要拼接id/long-comments */
-#define requestLongComments @"http://news-at.zhihu.com/api/4/story/"
+#define requestLongComments @"https://news-at.zhihu.com/api/4/story/"
 
 
 

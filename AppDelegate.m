@@ -13,6 +13,10 @@
 #import "DQPicturesViewController.h"
 #import "DQJokesTableViewController.h"
 #import "DQNavi.h"
+#include <sys/socket.h>
+#include <netdb.h>
+#include <arpa/inet.h>
+#include <err.h>
 
 @interface AppDelegate ()
 
@@ -46,8 +50,76 @@
     self.window.rootViewController = tbC;
     [self.window makeKeyAndVisible];
     
+    NSLog(@"getIPWithHostName:  %@", [self getIPWithHostName:@"news.at.zhihu.com"]);
+//    NSLog(@"ipv6:%@", [self getIPAddress:NO]);
+    
     return YES;
 }
+
+- (NSString *)getIPWithHostName:(NSString *)hostName {
+    const char * c_ip = [hostName UTF8String];
+    char * ipchar = calloc(hostName.length, sizeof(char));
+    strcpy(ipchar, c_ip);
+    
+    struct addrinfo hints, *res, *res0;
+    int error, s;
+    const char * newChar = "No";
+    
+    memset(&hints, 0, sizeof(hints));
+    hints.ai_family = PF_UNSPEC;
+    hints.ai_socktype = SOCK_STREAM;
+    hints.ai_flags = AI_DEFAULT;
+    
+    error = getaddrinfo(ipchar, "http", &hints, &res0);
+    free(ipchar);
+    
+    if (error) {
+        errx(1, "%s", gai_strerror(error));
+        /*NOTREACHED*/
+    }
+    s = -1;
+    
+    static struct sockaddr_in6 * addr6;
+    static struct sockaddr_in * addr;
+    //    NSString * NewStr = NULL;
+    char ipbuf[32];
+    
+    NSString * TempA = NULL;
+    
+    for (res = res0; res; res = res->ai_next) {
+        
+        if (res->ai_family == AF_INET6) {
+            addr6 =( struct sockaddr_in6*)res->ai_addr;
+            newChar = inet_ntop(AF_INET6, &addr6->sin6_addr, ipbuf, sizeof(ipbuf));
+            TempA = [[NSString alloc] initWithCString:(const char*)newChar
+                                             encoding:NSASCIIStringEncoding];
+            
+            //            address = TempA;
+            
+            //            NSString * TempB = [NSString stringWithUTF8String:"&&ipv6"];
+            //
+            //            NewStr = [TempA stringByAppendingString: TempB];
+            printf("%s\n", newChar);
+            
+        } else {
+            addr =( struct sockaddr_in*)res->ai_addr;
+            newChar = inet_ntop(AF_INET, &addr->sin_addr, ipbuf, sizeof(ipbuf));
+            TempA = [[NSString alloc] initWithCString:(const char*)newChar
+                                             encoding:NSASCIIStringEncoding];
+            //            NSString * TempB = [NSString stringWithUTF8String:"&&ipv4"];
+            //
+            //            NewStr = [TempA stringByAppendingString: TempB];
+            printf("%s\n", newChar);
+        }
+        
+        break;
+    }
+    
+    freeaddrinfo(res0);
+    
+    return TempA;
+}
+
 
 //配置sideMenu
 - (void)configSideMenu:(RESideMenu *)sideMenuVC {
@@ -72,6 +144,10 @@
                                                            NSForegroundColorAttributeName : [UIColor whiteColor]
                                                            }];
 }
+
+
+
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
