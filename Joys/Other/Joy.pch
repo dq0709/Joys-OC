@@ -19,7 +19,7 @@
 /** 最新数据 */
 #define requestLatestDataURL @"https://news-at.zhihu.com/api/4/news/latest"
 /** 某天之前的数据  需要拼接date*/
-#define requestBeforeDataURL @"https://news.at.zhihu.com/api/4/news/before/"
+#define requestBeforeDataURL @"http://news.at.zhihu.com/api/4/news/before/"
 /** 某条数据  需要拼接id*/
 #define requestNewsURL @"https://news-at.zhihu.com/api/4/news/"
 /** 主题列表 */
